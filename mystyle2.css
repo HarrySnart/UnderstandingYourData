@@ -1,0 +1,403 @@
+.body.c > table, .body.c > pre, .body.c div > table,
+.body.c div > pre, .body.c > table, .body.c > pre,
+.body.j > table, .body.j > pre, .body.j div > table,
+.body.j div > pre, .body.j > table, .body.j > pre,
+.body.c p.note, .body.c p.warning, .body.c p.error, .body.c p.fatal,
+.body.j p.note, .body.j p.warning, .body.j p.error, .body.j p.fatal,
+.body.c > table.layoutcontainer, .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.layoutregion.l table, .layoutregion.l pre, .layoutregion.l p.note,
+.layoutregion.l p.warning, .layoutregion.l p.error, .layoutregion.l p.fatal { margin-left: 0 }
+.layoutregion.c table, .layoutregion.c pre, .layoutregion.c p.note,
+.layoutregion.c p.warning, .layoutregion.c p.error, .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r p.warning, .layoutregion.r p.error, .layoutregion.r p.fatal { margin-right: 0 }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block }
+html{ font-size: 100% }
+.body { margin: 1em; font-size: 13px; line-height: 1.231 }
+sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px }
+dd { margin: 0 0 0 40px }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+img { border: 0; vertical-align: middle }
+svg:not(:root) { overflow: hidden }
+figure { margin: 0 }
+table { border-collapse: collapse; border-spacing: 0 }
+.layoutcontainer { border-collapse: separate; border-spacing: 0 }
+p { margin-top: 0; text-align: left }
+h1.heading1 { text-align: left }
+h2.heading2 { text-align: left }
+h3.heading3 { text-align: left }
+h4.heading4 { text-align: left }
+h5.heading5 { text-align: left }
+h6.heading6 { text-align: left }
+span { text-align: left }
+table { margin-bottom: 1em }
+td, th { text-align: left; padding: 3px 6px; vertical-align: top }
+td[class$="fixed"], th[class$="fixed"] { white-space: pre }
+section, article { padding-top: 1px; padding-bottom: 8px }
+hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.stacked-value { text-align: left; display: block }
+.stacked-cell > .stacked-value, td.data > td.data, th.data > td.data, th.data > th.data, td.data > th.data, th.header > th.header { border: 0 }
+.stacked-cell > div.data { border-width: 0 }
+.systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.systitleandfootercontainer > p { margin: 0 }
+.systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.batch { display: table }
+.toc { display: none }
+.proc_note_group, .proc_title_group { margin-bottom: 1em }
+p.proctitle { margin: 0 }
+p.note, p.warning, p.error, p.fatal { display: table }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner,
+.notecontent, .warncontent, .errorcontent, .fatalcontent { display: table-cell; padding: 0.5em }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner { padding-right: 0 }
+.body > div > ol li { text-align: left }
+.beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.c { text-align: center }
+.r { text-align: right }
+.l { text-align: left }
+.j { text-align: justify }
+.d { text-align: right }
+.b { vertical-align: bottom }
+.m { vertical-align: middle }
+.t { vertical-align: top }
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.accessiblecaption {
+    border-width: 0;
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight: bold;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+.aftercaption {
+    background-color: #111111;
+    border: 0 solid #4d4d4d;
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight: bold;
+    padding: 0 2.5pt;
+}
+.batch {
+    background-color: #333333;
+    border: 1.5pt solid #666666;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #cccccc;
+    font-family: 'Courier New', 'courier new', monospace;
+    font-size: 8pt;
+    padding: 2.5pt;
+}
+.beforecaption {
+    background-color: #111111;
+    border: 0 solid #4d4d4d;
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight: bold;
+    padding: 0 2.5pt;
+}
+.body {
+    background-color: #111111;
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.bodydate, .bycontentfolder {
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.byline {
+    border-width: 0;
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight: bold;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+.bylinecontainer {
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.caption, .cell {
+    background-color: #111111;
+    border: 1pt solid #4d4d4d;
+    color: #ffffff;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+    padding: 2.5pt;
+}
+.container, .contentfolder, .contentitem, .contentproclabel, .contentprocname {
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.contents {
+    background-color: #333333;
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.contentsdate, .contenttitle, .continued {
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.data {
+    background-color: #111111;
+    border: 1pt solid #4d4d4d;
+    color: #ffffff;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+    padding: 2.5pt;
+}
+.dataemphasis, .dataemphasisfixed {
+    background-color: #111111;
+    border: 1pt solid #4d4d4d;
+    color: #ffffff;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+    font-style: italic;
+    padding: 2.5pt;
+}
+.dataempty {
+    background-color: #111111;
+    border: 1pt solid #4d4d4d;
+    color: #ffffff;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+    padding: 2.5pt;
+}
+.datafixed {
+    background-color: #111111;
+    border: 1pt solid #4d4d4d;
+    color: #ffffff;
+    font-family: 'Courier New', 'courier new', monospace;
+    font-size: 8pt;
+    padding: 2.5pt;
+}
+.datastrong, .datastrongfixed {
+    background-color: #111111;
+    border: 1pt solid #4d4d4d;
+    color: #ffffff;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+    padding: 2.5pt;
+}
+.document {
+    background-color: #111111;
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.errorbanner {
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+}
+.errorcontent, .errorcontentfixed, .extendedpage {
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.fatalbanner {
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+}
+.fatalcontent, .fatalcontentfixed, .folderaction {
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.footer, .footeremphasis, .footeremphasisfixed, .footerempty, .footerfixed, .footerstrong, .footerstrongfixed {
+    background-color: #333333;
+    background-image: linear-gradient(top, #4D4D4D, #333333);
+    border: 1pt solid #4d4d4d;
+    color: #cccccc;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+    font-weight: normal;
+    padding: 2.5pt;
+    text-align: center;
+    vertical-align: middle;
+}
+.frame {
+    background-color: #111111;
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.graph {
+    border: 1px solid #666666;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.header, .headeremphasis, .headeremphasisfixed, .headerempty, .headerfixed {
+    background-color: #333333;
+    background-image: linear-gradient(top, #4D4D4D, #333333);
+    border: 1pt solid #4d4d4d;
+    color: #cccccc;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+    font-weight: normal;
+    padding: 2.5pt;
+    text-align: center;
+    vertical-align: middle;
+}
+.headersandfooters {
+    background-color: #111111;
+    border: 1pt solid #4d4d4d;
+    color: #ffffff;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+    padding: 2.5pt;
+}
+.headerstrong, .headerstrongfixed {
+    background-color: #333333;
+    background-image: linear-gradient(top, #4D4D4D, #333333);
+    border: 1pt solid #4d4d4d;
+    color: #cccccc;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+    font-weight: normal;
+    padding: 2.5pt;
+    text-align: center;
+    vertical-align: middle;
+}
+.indexaction {
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.linecontent {
+    background-color: #111111;
+    border: 1pt solid #4d4d4d;
+    color: #ffffff;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+    padding: 2.5pt;
+}
+.list, .list10, .list2, .list3, .list4, .list5, .list6, .list7, .list8, .list9, .listitem, .listitem10, .listitem2, .listitem3, .listitem4, .listitem5, .listitem6, .listitem7, .listitem8, .listitem9 {
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.notebanner {
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+}
+.notecontent, .notecontentfixed {
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.output {
+    border: 1.5pt solid #666666;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.pagebreak {
+    content: ' ';
+    height: 1em;
+}
+.pageno {
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.pages {
+    background-color: #333333;
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.pagesdate, .pagesitem, .pagesproclabel, .pagesprocname, .pagestitle, .paragraph, .parskip, .prepage {
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.proctitle, .proctitlefixed {
+    border-width: 0;
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight: bold;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+.rowfooter, .rowfooteremphasis, .rowfooteremphasisfixed, .rowfooterempty, .rowfooterfixed, .rowfooterstrong, .rowfooterstrongfixed, .rowheader, .rowheaderemphasis, .rowheaderemphasisfixed, .rowheaderempty, .rowheaderfixed, .rowheaderstrong, .rowheaderstrongfixed {
+    background-color: #333333;
+    background-image: linear-gradient(top, #4D4D4D, #333333);
+    border: 1pt solid #4d4d4d;
+    color: #cccccc;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+    font-weight: normal;
+    padding: 2.5pt;
+    text-align: center;
+    vertical-align: middle;
+}
+.systemfooter, .systemfooter10, .systemfooter2, .systemfooter3, .systemfooter4, .systemfooter5, .systemfooter6, .systemfooter7, .systemfooter8, .systemfooter9, .systemtitle, .systemtitle10, .systemtitle2, .systemtitle3, .systemtitle4, .systemtitle5, .systemtitle6, .systemtitle7, .systemtitle8, .systemtitle9 {
+    border-width: 0;
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+.systitleandfootercontainer {
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.table {
+    border: 1.5pt solid #666666;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+}
+.titleandnotecontainer, .usertext {
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
+.warnbanner {
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+}
+.warncontent, .warncontentfixed {
+    color: #eeeeee;
+    font-family: Arial, arial, helvetica, sans-serif;
+    font-size: 8pt;
+}
