@@ -3,7 +3,7 @@ libname casuser cas;
 
 *Load dataset into memory;
 proc sql;
-create table casuser.hmeq(replace=yes) as select *,put(bad,1.) as BAD_CLASS FROM  '/home/sukhsn/Demo/hmeq.sas7bdat';
+create table casuser.hmeq(replace=yes) as select *,put(bad,1.) as BAD_CLASS FROM  '/home/Demo/hmeq.sas7bdat';
 quit;
 
 *Generate correlation and EDA datasets using dataSciencePilot;
@@ -34,8 +34,8 @@ quit;
 
 
 *Define ODS settings;
-filename odsout "/home/sukhsn/Demo/EDA.html" mod;
-filename odp "/home/sukhsn/Demo/";
+filename odsout "/home/Demo/EDA.html" mod;
+filename odp "/home/Demo/";
 ods _all_ close;
 ods listing image_dpi=500;
 ods graphics on / imagemap  noborder  outputfmt=svg; /* enable data tips */
